@@ -2,65 +2,52 @@
 Development of a Connect Four web game for two players, implemented using HTML, CSS, and vanilla JavaScript. Features include player naming, score tracking, win/draw detection, and chip drop animation.
 
 
-# MAX & BRU CONNECT 4 | Hypermedia Project
+# Connect Four Web Game
 
-## 1. 🎯 Project Goals
+## I. Project Overview and Objective
 
-This project involves developing an implementation of the popular board game **Connect Four** as a two-player web game.
+This project delivers a browser-based implementation of the classic board game, **Connect Four (Conecta Cuatro)**, developed for two players.
 
-### Game Rules
+The primary objective was to build a fully functional, two-player web game using core web technologies, meeting the specified requirements for game logic, UI/UX, and implementation documentation.
 
-* [cite_start]The game is played on a vertical grid that is 6 rows high and 7 columns wide[cite: 6].
-* [cite_start]Players take turns dropping colored tokens (Red or Yellow) into one of the seven columns[cite: 6].
-* [cite_start]The pieces fall straight down, occupying the lowest available space within the column[cite: 7].
-* [cite_start]The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens[cite: 8].
+### Core Game Mechanics
 
----
+* Grid Size: 6 rows by 7 columns.
+* Gameplay: Players take turns dropping either a Red or Yellow token into any available column.
+* Gravity: Tokens fall to the lowest unoccupied space in the selected column.
+* Winning Condition:The first player to form a line of four consecutive tokens (horizontally, vertically, or diagonally) wins the round.
 
-## 2. 🚀 Technical Implementation
+***
 
-The project has been developed using fundamental web technologies:
+## II. Technical Implementation
 
-* **HTML5 (`index.html`):** Provides the game structure, the initial setup screen for player names, and the container for the game board.
-* **CSS3 (`style.css`):** Manages the visual presentation, responsive layout, and thematic styles (Vibrant Red background, full-width Navy Blue header, Red and Yellow chip colors). It also handles the display/hiding of screens (`setup-screen` vs `game-screen`) and the styles for the end-game modal.
-* **JavaScript (`script.js`):** Contains all the functional game logic:
-    * State management (the 6x7 board matrix).
-    * Detection of the lowest available drop row (`getLowestAvailableRow`).
-    * Turn management and score updates.
-    * Logic for checking win and draw conditions (`checkWin`, `checkDraw`).
-    * Implements a "dropping" animation for the chips using CSS transitions (`transform`).
+The game is built entirely using standard web development languages, relying on no external frameworks or libraries.
 
----
+### Technologies Used
 
-## 3. ✨ Design and Style (Considerations)
-
-While the style was not strictly fixed by the example, a design has been adopted that enhances the user interface (UI) and uses contrasting colors:
-
-| Element | Style | Justification |
+| File | Technology | Role in the Project |
 | :--- | :--- | :--- |
-| **Header** | Navy Blue (`#00008b`), full width. | Provides a strong contrast against the background and maximizes the visual impact of the logo. |
-| **Background (`body`)** | Vibrant Red (`#FF0000`). | Creates a striking, classic game theme as requested. |
-| **Logo** | The image `connect4.png` is used as the main logo. | [cite_start]Improves the UI and aligns with the suggestion to be creative[cite: 45]. |
-| **Start Button** | "START" text in Navy Blue. | Achieves brand uniformity with the header and board color. |
-| **Game Board** | Navy Blue. | Uses the same color as the header for visual consistency, simulating the original game's structure color. |
+| `index.html` | **HTML5** | Defines the structure: the setup screen for name input, the game board container, and the end-game modal. |
+| `style.css` | **CSS3** | Handles all visual aspects, including the custom color scheme (Vibrant Red background, Navy Blue header), board layout, responsiveness, and the smooth chip drop animation using CSS transitions. |
+| `script.js` | **Vanilla JavaScript** | Contains the core application logic: board state management (6x7 array), turn switching, detecting available rows, checking for win conditions (`checkWin`), and updating the score and UI. |
 
----
+***
 
-## 4. 🛠️ Tool and Framework Usage
+## III. Design and Custom Styling
 
-[cite_start]No external frameworks or libraries (such as Bootstrap) were used[cite: 43].
+The user interface was styled to be clear, engaging, and themed after the classic game, incorporating the following design decisions:
 
-The implementation relies exclusively on **HTML5, CSS3, and vanilla JavaScript**, which ensures:
+Color Scheme:** A combination of **Vibrant Red (`#FF0000`)** for the background and **Navy Blue (`#00008b`)** for the header, game board, and primary buttons was chosen for high contrast and visual appeal.
+Header and Branding:** The header strip is designed to span the **full width** of the screen, creating a distinct visual separation from the main content. The custom logo (`connect4.png`) is centered within this header.
+* **Interface Flow:** The game employs a clean, modal-based system for transitioning between the name input screen, the gameplay itself, and the end-of-round message, ensuring a smooth user experience.
+* **Button Styling:** The main "START" button uses the project's primary Navy Blue color for thematic consistency.
 
-1.  [cite_start]**Code Clarity and Correctness:** The code is lightweight and easily traceable within `script.js`, which is key to evaluation[cite: 46].
-2.  **Fundamental Approach:** Fulfills the project's requirement to develop the core logic using standard web technologies.
+***
 
----
+## IV. Potential Future Enhancements
 
-## 5. 💡 Potential Enhancements
+The current codebase is stable and designed for future expansion:
 
-The code is designed to be extensible. [cite_start]The following features could be added to expand the requirements and potentially increase the project's mark[cite: 47]:
-
-* **AI (Computer Player):** Implementing a computer opponent (e.g., using a Minimax algorithm).
-* **Advanced Animation:** Enhancing the visualization of the "four-in-a-row" winner (e.g., highlighting the winning chips).
-* **Data Persistence:** Storing player names and the overall score permanently using browser `localStorage`.
+* **Computer Opponent (AI):** Implementation of an AI player, likely utilizing a search algorithm like Minimax, to allow for single-player functionality.
+* **Persistence:** Integrating `localStorage` to save player scores permanently across browser sessions.
+* **Visual Feedback:** Adding animations or highlights to the four chips that constitute the winning line when a game ends.
