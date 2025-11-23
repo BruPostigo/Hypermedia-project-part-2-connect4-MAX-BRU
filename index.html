@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ORIGINAL GAME OF CONNECT 4</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="connect4.png" alt="THE ORIGINAL GAME OF CONNECT 4" class="game-logo"> 
+    </header>
+
+    <main>
+        <section id="setup-screen">
+            <h2>INTRODUCIR NOMBRES DE LOS JUGADORES</h2> 
+            
+            <div class="player-input">
+                <label for="player1-name">Name player 1 (Red):</label>
+                <input type="text" id="player1-name" value=""> 
+            </div>
+            <div class="player-input">
+                <label for="player2-name">Name player 2 (Yellow):</label>
+                <input type="text" id="player2-name" value=""> 
+            </div>
+            <button id="start-game-btn">Play!</button>
+        </section>
+
+        <section id="game-screen" class="hidden">
+            <h2 id="score-display"></h2>
+            
+            <div id="game-board">
+                </div>
+            
+            <p id="current-player-turn"></p>
+        </section>
+
+        <div id="game-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3 id="modal-message"></h3>
+                <button id="new-round-btn">New Game</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
